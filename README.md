@@ -5,33 +5,28 @@ Madison é um framework de regras escrito em JavaScript. Ele segue o mesmo conce
 
 ## Versionamento
 
-'<breaks>.<news>.<fixes>' = 1.2.3
+`<breaks>.<news>.<fixes>` = `1.2.3`
 
-+ breaks: Indica uma alteração que modifica consideravelmente a estrutura e composição do framework, resultando em quebra de compatibilidade(resetar news e fixes);
-+ news: Indica uma nova funcionalidade sem quebra de compatibilidade (resetar fixes);
-+ fixes: Indica uma melhoria e/ou correção de bugs sem quebra de compatibilidade.
++ **breaks**: Indica uma alteração que modifica consideravelmente a estrutura e composição do framework, resultando em quebra de compatibilidade(resetar news e fixes);
++ **news**: Indica uma nova funcionalidade sem quebra de compatibilidade (resetar fixes);
++ **fixes**: Indica uma melhoria e/ou correção de bugs sem quebra de compatibilidade.
 
 
 ## Como funciona
 
 Madison necessita de regras para funcionar. As regras são na verdade a configuração de Madison. Toda regra inserida em Madison deve retornar true ou false. Cada regra de Madison é composta por duas premissas:
 
-### rule
-
-Function responsável por conter a lógica da regra para verificação, deve retornar true ou false;
-
-### errorMessage
-
-String com a descrição do erro caso a verificação retorne false.
++ **rule**: Function responsável por conter a lógica da regra para verificação, deve retornar true ou false;
++ **errorMessage**: String com a descrição do erro caso a verificação retorne false.
 						
 
 ## Como usar
 
-### Existem duas formas de inserir regras, veja:
+**Existem duas formas de inserir regras, veja:**
 
-**Inserindo uma única regra**
+Inserindo uma única regra
 	
-...
+```js
 Madison({
 	rule: function () {
 		var nome = document.querySelector('#inputNome').value;
@@ -39,11 +34,11 @@ Madison({
 	},
 	errorMessage: 'Nome não pode ser vazio!'
 });
-...
+```
 	
-**Inserindo várias regras de uma vez**
+Inserindo várias regras de uma vez
 
-...	
+```js
 Madison([{
 	rule: function () {
 		var nome = document.querySelector('#inputNome').value;
@@ -57,21 +52,21 @@ Madison([{
 	},
 	errorMessage: 'Idade não pode ser vazio!'
 }]);
-...
+```
 	
-### Para executar Madison, existem duas formas, veja:
+**Para executar Madison, existem duas formas, veja:**
 
-**Lançamento do erro, onde a execução é interrompida ao encontrar o primeiro erro**
+Lançamento do erro, onde a execução é interrompida ao encontrar o primeiro erro
 
-...	
+```js
 Madison.execute();
-...
+```
 	
-**Retorno dos erros, onde um array contendo todos os errors é retornado. Nenhum erro é lançado**
+Retorno dos erros, onde um array contendo todos os errors é retornado. Nenhum erro é lançado
 
-...
+```js
 Madison.executeAndReturnErrors();
-...
+```
 
 	
 ## Autor
