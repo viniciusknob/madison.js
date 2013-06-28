@@ -1,23 +1,23 @@
-# Madison JavaScript Framework v0.1.1 Beta
+# Madison v0.2.0 Beta
 
 Madison é um framework de regras escrito em JavaScript. Ele segue o mesmo conceito de [seu irmão](https://github.com/viniciusknob/madison) da linguagem Java. 
 
 
 ## Versionamento
 
-`<breaks>.<news>.<fixes>` = `1.2.3`
+`<quebra>.<novo>.<melhoria>` = `1.2.3`
 
-+ **breaks**: Indica uma alteração que modifica consideravelmente a estrutura e composição do framework, resultando em quebra de compatibilidade(resetar news e fixes);
-+ **news**: Indica uma nova funcionalidade sem quebra de compatibilidade (resetar fixes);
-+ **fixes**: Indica uma melhoria e/ou correção de bugs sem quebra de compatibilidade.
+- **quebra**: Indica uma alteração que modifica consideravelmente a estrutura e composição do framework, resultando em quebra de compatibilidade(resetar novo e melhoria);
+- **novo**: Indica uma nova funcionalidade sem quebra de compatibilidade (resetar melhoria);
+- **melhoria**: Indica uma melhoria e/ou correção de bugs sem quebra de compatibilidade.
 
 
 ## Como funciona
 
 Madison necessita de regras para funcionar. As regras são na verdade a configuração de Madison. Toda regra inserida em Madison deve retornar true ou false. Cada regra de Madison é composta por duas premissas:
 
-+ **rule**: Function responsável por conter a lógica da regra para verificação, deve retornar true ou false;
-+ **errorMessage**: String com a descrição do erro caso a verificação retorne false.
+- **rule**: Function responsável por conter a lógica da regra para verificação, deve retornar true ou false;
+- **errorMessage**: String com a descrição do erro caso a verificação retorne false.
 						
 
 ## Como usar
@@ -73,8 +73,8 @@ Madison.executeAndReturnErrors();
 
 **Vinícius Knob**
 
-+ [http://twitter.com/viniciusknob](http://twitter.com/viniciusknob)
-+ [http://github.com/viniciusknob](http://github.com/viniciusknob)
+- [http://twitter.com/viniciusknob](http://twitter.com/viniciusknob)
+- [http://github.com/viniciusknob](http://github.com/viniciusknob)
 
 
 ## Licença

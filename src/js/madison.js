@@ -1,7 +1,7 @@
 /*!
- * Madison JavaScript Framework v0.1.1
+ * Madison JavaScript Framework v0.2.0
  *
- * Copyright (C) 2013 Vinicius Knob
+ * Copyright (C) 2013 Vinícius Knob
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,12 +22,8 @@
 (function (window, undefined) {
     var Madison = (function () {
         var
-        
-        // Versao atual
-        _version = '0.1.1',
 
-        // Regras inseridas pelo usuario
-        _rules = [],
+        _rules = []; // Regras inseridas pelo usuario
 
         Madison = function (obj) {
             if (obj) {
@@ -42,8 +38,16 @@
             }
         };
 
-        Madison.version = _version;
-        
+        Madison.version = '0.2.0'; // Versao atual
+
+        Madison.reset = function () {
+            _rules = [];
+        };
+
+        Madison.lengthRules = function () {
+            return _rules.length;
+        };
+
         Madison.execute = function () {
             var size = _rules.length;
             for (var i = 0; i < size; i++) {
@@ -52,7 +56,7 @@
                 }
             }
         };
-        
+
         Madison.executeAndReturnErrors = function () {
             var size = _rules.length,
                 errors = [];
@@ -63,7 +67,7 @@
             }
             return errors;
         };
-        
+
         return Madison;
     }());
     window.Madison = Madison;
